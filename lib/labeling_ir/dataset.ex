@@ -3,10 +3,21 @@ defmodule LabelingIR.Dataset do
   Versioned dataset and slices for labeling/eval workloads.
   """
 
-  alias LabelingIR.ArtifactRef
+  alias LabelingIR.{ArtifactRef, Types}
 
   @enforce_keys [:id, :tenant_id, :version, :created_at]
-  defstruct [:id, :tenant_id, :version, :created_at, slices: [], source_refs: [], metadata: %{}]
+  @derive Jason.Encoder
+  defstruct [
+    :id,
+    :tenant_id,
+    :namespace,
+    :version,
+    :created_at,
+    :lineage_ref,
+    slices: [],
+    source_refs: [],
+    metadata: %{}
+  ]
 
   @type slice :: %{
           name: String.t(),
@@ -17,10 +28,12 @@ defmodule LabelingIR.Dataset do
   @type t :: %__MODULE__{
           id: String.t(),
           tenant_id: String.t(),
+          namespace: String.t() | nil,
           version: String.t(),
           slices: [slice()],
           source_refs: [ArtifactRef.t() | map()],
           metadata: map(),
+          lineage_ref: Types.lineage_ref() | nil,
           created_at: DateTime.t()
         }
 end

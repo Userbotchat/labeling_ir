@@ -1,0 +1,117 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="hexClip">
+      <path d="M200 20L348 110V290L200 380L52 290V110L200 20Z"/>
+    </clipPath>
+    <linearGradient id="hexGrad" x1="70" y1="40" x2="330" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0D1B2A"/>
+      <stop offset="0.45" stop-color="#142A3D"/>
+      <stop offset="1" stop-color="#0A1321"/>
+    </linearGradient>
+    <radialGradient id="coreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 200) rotate(90) scale(160 160)">
+      <stop stop-color="#2FF7D6" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#10C4B0" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentGrad" x1="120" y1="70" x2="310" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7B9FFF"/>
+      <stop offset="1" stop-color="#44F3D8"/>
+    </linearGradient>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="translate(0 0)">
+      <path d="M18 0L0 0 0 18" stroke="#1F334A" stroke-width="1"/>
+    </pattern>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.35 0 0 0 0 0.95 0 0 0 0 0.86 0 0 0 0.55 0" result="tint"/>
+      <feBlend in="SourceGraphic" in2="tint" mode="screen"/>
+    </filter>
+    <filter id="innerShadow" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+      <feOffset dy="4" result="off"/>
+      <feGaussianBlur in="off" stdDeviation="8" result="blur"/>
+      <feComposite in="blur" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadow"/>
+      <feColorMatrix in="shadow" type="matrix" values="0 0 0 0 0 0 0 0 0 0.9 0 0 0 0 0.78 0 0 0 0.55 0"/>
+      <feBlend in="SourceGraphic" in2="shadow" mode="overlay"/>
+    </filter>
+  </defs>
+
+  <!-- Outer hexagon -->
+  <path d="M200 20L348 110V290L200 380L52 290V110L200 20Z" fill="url(#hexGrad)" stroke="#5BE4FF" stroke-width="2.5"/>
+
+  <!-- Everything inside the hex -->
+  <g clip-path="url(#hexClip)" filter="url(#innerShadow)">
+    <rect x="52" y="20" width="296" height="360" fill="url(#grid)" opacity="0.25"/>
+    <rect x="52" y="20" width="296" height="360" fill="url(#coreGlow)" opacity="0.85"/>
+
+    <!-- Concentric hex frames -->
+    <g stroke="url(#accentGrad)" stroke-width="1.8" stroke-linejoin="round" opacity="0.9">
+      <path d="M200 54L322 126V270L200 342L78 270V126L200 54Z" fill="none"/>
+      <path d="M200 88L296 146V250L200 308L104 250V146L200 88Z" fill="none"/>
+      <path d="M200 122L270 166V230L200 274L130 230V166L200 122Z" fill="none"/>
+    </g>
+
+    <!-- Circuitry layer -->
+    <g stroke="#61F2D2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+      <path d="M110 246C138 232 148 214 170 194C188 177 218 150 236 146C260 142 290 160 308 182" fill="none"/>
+      <path d="M86 204C124 180 160 170 200 180C232 188 268 216 300 228" fill="none"/>
+      <path d="M144 136C178 148 196 162 220 186C246 212 270 232 310 246" fill="none"/>
+      <circle cx="110" cy="246" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="170" cy="194" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="236" cy="146" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="308" cy="182" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="86" cy="204" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="200" cy="180" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+      <circle cx="310" cy="246" r="4.5" fill="#0B1C2D" stroke="#61F2D2" stroke-width="2"/>
+    </g>
+
+    <!-- Central core -->
+    <g filter="url(#softGlow)">
+      <circle cx="200" cy="200" r="64" fill="#0E1F33" stroke="#7BF0FF" stroke-width="2.4"/>
+      <circle cx="200" cy="200" r="48" fill="none" stroke="url(#accentGrad)" stroke-width="5" stroke-dasharray="12 10"/>
+      <circle cx="200" cy="200" r="26" fill="#0B1826" stroke="#2FF7D6" stroke-width="2.2"/>
+      <path d="M200 152L220 200L200 248L180 200Z" fill="#1CF3D4" fill-opacity="0.08" stroke="#7BF0FF" stroke-width="1.6"/>
+      <path d="M200 160L232 200L200 240L168 200Z" stroke="#45E2D0" stroke-width="1.4" stroke-dasharray="6 6"/>
+      <circle cx="200" cy="200" r="6.5" fill="#7BF0FF" />
+    </g>
+
+    <!-- Orbital rings -->
+    <g stroke="#6CA4FF" stroke-width="1.6" opacity="0.75">
+      <ellipse cx="200" cy="200" rx="138" ry="64" transform="rotate(-8 200 200)"/>
+      <ellipse cx="200" cy="200" rx="112" ry="52" transform="rotate(14 200 200)" stroke="#2FF7D6"/>
+    </g>
+
+    <!-- Data rays -->
+    <g stroke="#9BD3FF" stroke-width="2" stroke-linecap="round" opacity="0.6">
+      <path d="M200 70L200 116"/>
+      <path d="M310 142L280 158"/>
+      <path d="M320 220L280 220"/>
+      <path d="M80 230L120 230"/>
+      <path d="M100 148L138 160"/>
+      <path d="M200 280L200 324"/>
+    </g>
+
+    <!-- Micro ticks -->
+    <g stroke="#4DF6D8" stroke-width="1.4" stroke-linecap="round" opacity="0.85">
+      <path d="M200 112L200 122"/>
+      <path d="M244 124L248 132"/>
+      <path d="M276 154L284 158"/>
+      <path d="M296 198L306 198"/>
+      <path d="M276 244L284 238"/>
+      <path d="M244 272L248 264"/>
+      <path d="M200 284L200 294"/>
+      <path d="M156 272L152 264"/>
+      <path d="M124 244L116 238"/>
+      <path d="M104 198L94 198"/>
+      <path d="M124 154L116 158"/>
+      <path d="M156 124L152 132"/>
+    </g>
+
+    <!-- Peripheral nodes -->
+    <g fill="#0C1C2C" stroke="#86F1FF" stroke-width="2">
+      <circle cx="200" cy="70" r="7"/>
+      <circle cx="310" cy="142" r="7"/>
+      <circle cx="320" cy="220" r="7"/>
+      <circle cx="200" cy="330" r="7"/>
+      <circle cx="90" cy="228" r="7"/>
+      <circle cx="100" cy="148" r="7"/>
+    </g>
+  </g>
+</svg>

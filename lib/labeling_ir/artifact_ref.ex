@@ -4,6 +4,7 @@ defmodule LabelingIR.ArtifactRef do
   """
 
   @enforce_keys [:artifact_id]
+  @derive Jason.Encoder
   defstruct [:artifact_id, :version]
 
   @type t :: %__MODULE__{

@@ -6,6 +6,7 @@ defmodule LabelingIR.Schema.Field do
   @type field_type :: :scale | :text | :boolean | :select | :multiselect | atom()
 
   @enforce_keys [:name, :type]
+  @derive Jason.Encoder
   defstruct [
     :name,
     :type,

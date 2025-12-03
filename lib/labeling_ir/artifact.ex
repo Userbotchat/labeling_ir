@@ -6,6 +6,7 @@ defmodule LabelingIR.Artifact do
   @type artifact_type :: :image | :json | :text | :other | atom()
 
   @enforce_keys [:id, :url, :filename, :artifact_type]
+  @derive Jason.Encoder
   defstruct [
     :id,
     :url,
